@@ -11,7 +11,15 @@
      <header class="header">
         <!-- Formulario con buscador-->
         <section class="hija-buscador">
-            <h3 class="buscador">Buscar <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></h3>
+            <form action="./search-results.html" method="get">
+                <div class="barra_busc">
+                    <label for="buscar"></label>
+                    <span class="buscador"> <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></span> <input type="text" name="buscar" id="buscar" value="Buscar">
+                </div>
+                <div>
+                    <button type="submit"></button>
+                </div>
+            </form>
         </section>
         <!--Menú de navegación-->
         <section class="hija-nav">
@@ -24,17 +32,50 @@
                     <li class="item"><a href="./favorites.html">Favoritos</a></li>
                 </ul>
             </nav>
+
         </section>
         <!-- Logotipo-->
         <section class="hija-logo">
-            <img class="logo" src="" alt="Logo">
+            <img class="logo" src="./img/Love Yourself Fundraisings T-Shirt.jpg" alt="Logo">
         </section>
     </header>
 
-    <main></main>
-    <footer>
+    <main>
+        <section class="pelis-series">
+            <!-- <h2>Películas populares</h2> -->
+            <article class="elemento">
+                <img src="./img/fotos tp prog/maxresdefault.jpeg" alt="Img" class="img-producto">
+                <h3>A través de mi ventana</h3>
+                <p>Fecha de estreno: 04/02/2022</p>
+            </article>
+            <article class="elemento">
+                <img src="./img/fotos tp prog/peliculas-mas-romanticas-del-mundo.jpeg" alt="" class="img-producto">
+                <h3>Yo antes de ti</h3>
+                <p>Fecha de estreno: 21/06/2016</p>
+            </article>
+            <article class="elemento">
+                <img src="./img/fotos tp prog/The-Kissing-Booth-2-Netflix-Movie-Soundtrack-Song-Listings.jpeg" alt="" class="img-producto">
+                <h3>The kissing booth</h3>
+                <p>Fecha de estreno: 04/02/2022</p>
+            </article>
+            <article class="elemento">
+                <img src="./img/fotos tp prog/Titanic.jpeg" alt="" class="img-producto">
+                <h3>Titanic</h3>
+                <p>Fecha de estreno: 04/02/2022</p>
+            </article>
+            <article class="elemento">
+                <img src="./img/fotos tp prog/water_for_elephants_3be14707.jpeg" alt="" class="img-producto">
+                <h3>A través de mi ventana</h3>
+                <p>Fecha de estreno: 04/02/2022</p>
+            </article>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
         <!-- Nombres de los integrantes del equipo (poner logo con nombres)-->
-        <!-- logo san andres-->
+        <img src="./img/IMG_4259.jpg" alt="Integrantes" class="logo-footer">
+
 
     </footer>
 

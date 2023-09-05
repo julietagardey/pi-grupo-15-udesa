@@ -4,6 +4,33 @@
 .body {
     background-color: black;
 }
+a {
+    text-decoration: none;
+    color: white;
+    list-style-type: none;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.hija-buscador {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    order: 3
+}
+.hija-nav {
+    order: 2
+}
+
+.hija-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    order: 1;
+}
 .barra-nav {
     display: flex;
     flex-wrap: wrap;
@@ -14,26 +41,62 @@
     gap: 20px;
 
 }
-.item {
-   
-}
-a {
-    text-decoration: none;
-    color: white;
-    list-style-type: none;
-}
-.hija-logo {
-    display: flex;
-    flex-wrap: wrap;
-}
 .logo {
-    border-radius: 50%;
+    width: 100px;
+    align-self: flex-start;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 .buscador {
     color: white;
 }
-.hija-buscador {
+.item {
+    font-size: 25px;
+}
+.barra_busc {
+    width:100%; 
+    display: flex;
+    
+}
+.elemento {
+    color: white;
+}
+.footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+}
+
+.logo-footer {
+    width: 500px;
+}
+h2 {
+    color: white;
+}
+
+.elemento {
+    display: flex;
+    flex-wrap: wrap;
+    width: 380px;
+    padding: 0;
+    margin: 30px 0px;
+
+}
+.img-producto {
+    width: 380px;
+}
+/*
+.vermas {
+    background-color: #444;
+    padding: 5px;
+    width: 120px;
+    height: 30px;
+    text-align: center;
+}
+*/
+.pelis-series {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
 }
