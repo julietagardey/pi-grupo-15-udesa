@@ -1,3 +1,4 @@
+
 .body{
     background-color: black;
 }
@@ -69,41 +70,16 @@ a {
     width: 500px;
 }
 
-.imagenport {
- height: 400px;
-}
 
-.portadapadre{
-    padding: 0px 50px;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.titulo{
-    color: white;
-    font-size: 45px;
-    margin-bottom: 0px;
-    margin-top: 50px;
-}
-
-.anoestreno{
-    color: grey;
-    margin-top: 7px;
-}
-.trailer{
-    padding-top: 30px;
-    width: 40%;
-}
 
 .redondeado{
-        text-align: center;
-        color: white;
-        width: 100px; /* Ancho del elemento */
-        height: 25px; /* Alto del elemento */
-        border: 2px solid grey; 
-        border-radius: 20px;
-        padding: 5px;
+    text-align: center;
+    color: white;
+    width: 150px; /* Ancho del elemento */
+    height: 25px; /* Alto del elemento */
+    border: 2px solid grey; 
+    border-radius: 20px;
+    padding: 5px;
 }
 
 .generos{
@@ -111,60 +87,31 @@ a {
     flex-wrap: wrap;
     padding-top: 30px;
     width: 100%;
-    justify-content: space-evenly;
-    
-   
-}
-
-.recom{
-    color: rgb(56, 218, 69) ;
-    margin-top: 10px;
-}
-.trailerformas {
-    display: flex;
-    flex-wrap: wrap;
-
-}
-
-.heart{
-    margin-top: 10px;
-}
-
-.fav{
-    color: white;
-    margin-top: 10px;
-    margin-left: 0%;
-}
-
-.rating{
-    margin-top: 10px;
-    margin-left: 0;
-    padding-left:30px;
-}
-
-.sinopsis{
-    color: white;
-    margin-left:30px ;
-    font-size: 30px;
-    margin-bottom: 0;
-    }
-    
-
-.generosmasinop{
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-}
-
-.sin{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.directores{
-    display: flex;
-    flex-wrap: wrap;
-    color: grey;
-    margin-left:30px ;
     justify-content: center;
+}
+
+.especifico{
+    color: grey;
+}
+
+.avanzada{
+    color: white;
+    margin: 0%;
+    
+}
+
+.padrebusq{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 100px;
+    
+}
+
+.titulos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
 }
