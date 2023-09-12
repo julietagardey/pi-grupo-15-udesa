@@ -147,7 +147,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column; /* esto hace que los elementos se pongan uno abajo del otro*/
-    width: 380px;
+    max-width: 380px;
     padding: 0;
     margin: 20px 0px;
     border: 3px solid white;
@@ -171,7 +171,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 2%; /* 0 para arriba y abajo*/
-    margin: 5%;
+    margin: 2% 5%;
     border: 1px solid white;
     background-color: #8827277b;
 }
@@ -180,4 +180,7 @@ h2 {
 }
 .search {
     display: none;
+}
+.sub-elemento {
+    padding-left: 15px;
 }
