@@ -183,4 +183,114 @@ h2 {
 }
 .sub-elemento {
     padding-left: 15px;
+
+   
+.portadapadre{
+       padding: 0px 50px;
+       display: flex;
+       flex-direction: column;
+   
+   }
+   
+.titulo-dg{
+       color: white;
+       font-size: 45px;
+       margin-bottom: 0px;
+       margin-top: 50px;
+   }
+   
+.sub-dg{
+       color: grey;
+       margin-top: 7px;
+   }
+.trailer-dg{
+       padding-top: 30px;
+       width: 40%;
+ 
+   }
+   
+.redondeado-dg{
+           text-align: center;
+           color: white;
+           width: 100px; /* Ancho del elemento */
+           height: 25px; /* Alto del elemento */
+           border: 2px solid grey; 
+           border-radius: 20px;
+           padding: 2px;
+   }
+   
+.generos{
+       display: flex;
+       flex-wrap: wrap;
+       padding-top: 30px;
+       width: 100%;
+       justify-content: space-evenly;
+       
+      
+   }
+   
+.trailerformas {
+       display: flex;
+       flex-wrap: wrap;
+   
+   }
+   
+.heart{
+       margin-top: 10px;
+       margin-left: 30px;
+   }
+   
+.fav{
+       color: white;
+       margin-top: 10px;
+       margin-left: 10px;
+   }
+   
+.rating{
+       margin-top: 10px;
+       margin-left: 0;
+       padding-left:30px;
+   }
+   
+.sinopsis-dg{
+       color: white;
+       margin-left:50px ;
+       font-size: 30px;
+       margin-bottom: 0;
+       }
+       
+   
+.generosmasinop{
+       display: flex;
+       flex-wrap: wrap;
+       width: 60%;
+   }
+   
+   .sin-dg{
+       display: flex;
+       flex-wrap: wrap;
+   }
+   
+   .directores-dg{
+       display: flex;
+       flex-wrap: wrap;
+       color: grey;
+       margin-left:50px ;
+       justify-content: center;
+   }
+   
+   .pelis-series-dg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2%; /* 0 para arriba y abajo*/
+    margin: 2%;
+    border: 1px solid rgb(0, 0, 0);
+    background-color: #0000007b;
+    }
+h3{
+    margin-left: 10px;
+}
+.fecha-dg{
+    margin-left: 10px;
 }
