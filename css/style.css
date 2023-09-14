@@ -157,15 +157,7 @@ h2 {
 .img-producto {
     width: 100%;
 }
-/*
-.vermas {
-    background-color: #444;
-    padding: 5px;
-    width: 120px;
-    height: 30px;
-    text-align: center;
-}
-*/
+
 .pelis-series {
     display: flex;
     flex-wrap: wrap;
@@ -288,10 +280,91 @@ h2 {
     margin: 2%;
     border: 1px solid rgb(0, 0, 0);
     background-color: #0000007b;
+    margin-top: 70px;
     }
 h3{
     margin-left: 10px;
 }
 .fecha-dg{
     margin-left: 10px;
+}
+
+.redondeado-search{
+    text-align: center;
+    color: white;
+    width: 150px; /* Ancho del elemento */
+    height: 25px; /* Alto del elemento */
+    border: 2px solid grey; 
+    border-radius: 20px;
+    padding: 5px;
+    padding-bottom: 25px;
+}
+
+.generos{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.especifico{
+    color: grey;
+}
+
+.avanzada{
+    color: white;
+    margin: 0%;
+    
+}
+
+.padrebusq{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 100px;
+    
+}
+
+.titulos{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+.rating-search {
+    margin-top: 10px;
+    margin-left: 0;
+    padding-left:30px;
+}
+.img-search {
+    width: 100%;
+    height: 330px;
+    border: 3px solid white;
+}
+.padre-img-search {
+    padding-top: 30px;
+    
+    width: 40%;
+ 
+}
+.p-search {
+    display: none;
+}
+.generos-search {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+.directores-search {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    margin-left:50px ;
+    justify-content: center;
+    padding-top: 30px;
 }
