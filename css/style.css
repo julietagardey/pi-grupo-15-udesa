@@ -459,9 +459,18 @@ h3 {
     justify-content: center;
 }
 
-
-
-
+.fa-heart {
+    color:#dc0909 ;
+}
+.fa-star {
+    color: #f0ce24;
+}
+.fa-regular {
+    color: #f0ce24;
+}
+.fa-magnifying-glass{
+    color: white;
+}
 @media(max-width:420px) {
 
     .item {
