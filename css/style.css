@@ -1,27 +1,36 @@
 * {
     box-sizing: border-box;
 }
+
 .body {
     background-color: black;
 }
+
 a {
     text-decoration: none;
     color: white;
     list-style-type: none;
 }
+
 .header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .hija-buscador {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    order: 3
+    order: 3;
+    align-items: center;
+    margin-right: 42px;
 }
+
 .hija-nav {
-    order: 2
+    display: flex;
+    order: 2;
+    align-items: center;
 }
 
 .hija-logo {
@@ -31,6 +40,7 @@ a {
     align-items: flex-start;
     order: 1;
 }
+
 .barra-nav {
     display: flex;
     flex-wrap: wrap;
@@ -41,26 +51,34 @@ a {
     gap: 20px;
 
 }
+
 .logo {
     width: 100px;
     align-self: flex-start;
     margin-left: 40px;
     margin-top: 10px;
 }
+
 .buscador {
     color: white;
+    margin-right: 10px;
+    padding-top: 2px;
 }
+
 .item {
     font-size: 25px;
 }
+
 .barra_busc {
-    width:100%; 
+    width: 100%;
     display: flex;
-    
+
 }
+
 .elemento {
     color: white;
 }
+
 .footer {
     display: flex;
     flex-wrap: wrap;
@@ -70,11 +88,12 @@ a {
 .logo-footer {
     width: 500px;
 }
+
 h2 {
     color: white;
 }
 
-.titulo-genero{
+.titulo-genero {
     color: white;
     margin: 10px;
     text-align: center;
@@ -82,7 +101,7 @@ h2 {
 }
 
 
-.genero{
+.genero {
     text-align: left;
     margin: 10px;
     background-color: #8e1b1bcb;
@@ -96,7 +115,7 @@ h2 {
 
 }
 
-.genero-peli{
+.genero-peli {
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -108,45 +127,50 @@ h2 {
 
 
 }
-.main-genero{
+
+.main-genero {
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 50px;
     margin-left: 10px;
-    
-   
+
+
 }
 
-.bloque-genero{
+.bloque-genero {
     padding: 0px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.banner{
+
+.banner {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     margin-bottom: 30px;
-    
+
 }
-.banner-foto{
+
+.banner-foto {
     border-radius: 20px;
-    width:90%;
+    width: 90%;
     height: 380px;
     border-style: solid;
     border-width: 5px;
     border-color: #8e1b1bcb;
 
-    
+
 }
+
 .elemento {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column; /* esto hace que los elementos se pongan uno abajo del otro*/
+    flex-direction: column;
+    /* esto hace que los elementos se pongan uno abajo del otro*/
     max-width: 380px;
     padding: 0;
     margin: 20px 0px;
@@ -154,6 +178,7 @@ h2 {
     background-color: black;
 
 }
+
 .img-producto {
     width: 100%;
 }
@@ -162,145 +187,98 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 2%; /* 0 para arriba y abajo*/
+    padding: 0 2%;
+    /* 0 para arriba y abajo*/
     margin: 2% 5%;
     border: 1px solid white;
     background-color: #8827277b;
 }
+
 .titulo-seccion {
-    width: 100%; /* hice que ocupe el 100% de su ancho entonces, lo manda para arriba -> antes era como una columna */
+    width: 100%;
+    /* hice que ocupe el 100% de su ancho entonces, lo manda para arriba -> antes era como una columna */
 }
+
 .search {
     display: none;
 }
+
 .sub-elemento {
     padding-left: 15px;
 }
 
-   
-.portadapadre{
-       padding: 0px 50px;
-       display: flex;
-       flex-direction: column;
-   
-   }
-   
-.titulo-dg{
-       color: white;
-       font-size: 45px;
-       margin-bottom: 0px;
-       margin-top: 50px;
-   }
-   
-.sub-dg{
-       color: grey;
-       margin-top: 7px;
-   }
-.trailer-dg{
-       padding-top: 30px;
-       width: 40%;
- 
-   }
-   
-.redondeado-dg{
-           text-align: center;
-           color: white;
-           width: 100px; /* Ancho del elemento */
-           height: 25px; /* Alto del elemento */
-           border: 2px solid grey; 
-           border-radius: 20px;
-           padding: 2px;
-   }
-   
-.generos{
-       display: flex;
-       flex-wrap: wrap;
-       padding-top: 30px;
-       width: 100%;
-       justify-content: space-evenly;
-       
-      
-   }
-   
-.trailerformas {
-       display: flex;
-       flex-wrap: wrap;
-   
-   }
-   
-.heart{
-       margin-top: 10px;
-       margin-left: 30px;
-   }
-   
-.fav{
-       color: white;
-       margin-top: 10px;
-       margin-left: 10px;
-   }
-   
-.rating{
-       margin-top: 10px;
-       margin-left: 0;
-       padding-left:30px;
-   }
-   
-.sinopsis-dg{
-       color: white;
-       margin-left:50px ;
-       font-size: 30px;
-       margin-bottom: 0;
-       }
-       
-   
-.generosmasinop{
-       display: flex;
-       flex-wrap: wrap;
-       width: 60%;
-   }
-   
-   .sin-dg{
-       display: flex;
-       flex-wrap: wrap;
-   }
-   
-   .directores-dg{
-       display: flex;
-       flex-wrap: wrap;
-       color: grey;
-       margin-left:50px ;
-       justify-content: center;
-   }
-   
-   .pelis-series-dg {
+
+.portadapadre {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.heart {
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.fav {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+.sinopsis-dg {
+    color: white;
+    margin-left: 50px;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+.directores-dg {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    margin-left: 50px;
+    justify-content: center;
+}
+
+.pelis-series-dg {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 2%; /* 0 para arriba y abajo*/
+    padding: 0 2%;
+    /* 0 para arriba y abajo*/
     margin: 2%;
     border: 1px solid rgb(0, 0, 0);
     background-color: #0000007b;
     margin-top: 70px;
-    }
-h3{
-    margin-left: 10px;
 }
-.fecha-dg{
+
+h3 {
     margin-left: 10px;
 }
 
-.redondeado-search{
+.fecha-dg {
+    margin-left: 10px;
+}
+
+.redondeado-search {
     text-align: center;
     color: white;
-    width: 150px; /* Ancho del elemento */
-    height: 25px; /* Alto del elemento */
-    border: 2px solid grey; 
+    width: 150px;
+    /* Ancho del elemento */
+    height: 25px;
+    /* Alto del elemento */
+    border: 2px solid grey;
     border-radius: 20px;
     padding: 5px;
     padding-bottom: 25px;
 }
 
-.generos{
+.generos {
     display: flex;
     flex-wrap: wrap;
     padding-top: 30px;
@@ -308,50 +286,55 @@ h3{
     justify-content: center;
 }
 
-.especifico{
+.especifico {
     color: grey;
 }
 
-.avanzada{
+.avanzada {
     color: white;
     margin: 0%;
-    
+
 }
 
-.padrebusq{
+.padrebusq {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     margin-bottom: 100px;
-    
+
 }
 
-.titulos{
+.titulos {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
 }
+
 .rating-search {
     margin-top: 10px;
     margin-left: 0;
-    padding-left:30px;
+    padding-left: 30px;
 }
+
 .img-search {
     width: 100%;
     height: 330px;
     border: 3px solid white;
 }
+
 .padre-img-search {
     padding-top: 30px;
-    
+
     width: 40%;
- 
+
 }
+
 .p-search {
     display: none;
 }
+
 .generos-search {
     display: flex;
     flex-wrap: wrap;
@@ -360,11 +343,248 @@ h3{
     justify-content: flex-start;
     padding-left: 20px;
 }
+
 .directores-search {
     display: flex;
     flex-wrap: wrap;
     color: grey;
-    margin-left:50px ;
+    margin-left: 50px;
     justify-content: center;
     padding-top: 30px;
+}
+
+
+.imagenportmov {
+    height: 400px;
+}
+
+.portadapadremov {
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.titulomov {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+.anoestrenomov {
+    color: grey;
+    margin-top: 7px;
+}
+
+.trailermov {
+    padding-top: 30px;
+    width: 40%;
+}
+
+.redondeadomov {
+    text-align: center;
+    color: white;
+    width: 115px;
+    /* Ancho del elemento */
+    height: 25px;
+    /* Alto del elemento */
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 2px;
+
+}
+
+.generosmov {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    width: 100%;
+    justify-content: space-evenly;
+
+
+}
+
+.recommov {
+    color: rgb(56, 218, 69);
+    margin-top: 4px;
+}
+
+.trailerformasmov {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.heartmov {
+    margin-top: 4px;
+}
+
+.favmov {
+    color: white;
+    margin-top: 4px;
+    margin-left: 0%;
+}
+
+.ratingmov {
+    margin-top: 4px;
+    margin-left: 0;
+    padding-left: 30px;
+}
+
+.sinopsismov {
+    color: white;
+    margin-left: 30px;
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+
+.generosmasinopmov {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.sinmov {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.directoresmov {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+    margin-left: 30px;
+    justify-content: center;
+}
+
+
+
+
+@media(max-width:420px) {
+
+    .item {
+        font-size: 18px;
+    }
+
+    .barra-nav {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .hija-nav {
+        width: 100%;
+        order: 3;
+    }
+
+    .hija-buscador {
+        order: 2;
+        align-items: center;
+        padding-right: 25px;
+        margin-right: 0px;
+    }
+
+    .logo-footer {
+        width: 100%;
+    }
+
+    .titulomov {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .anoestrenomov {
+        font-size: 15px;
+    }
+
+    .imagenportmov {
+        height: 130px;
+    }
+
+    .trailermov {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .videotrailer {
+        height: 200px;
+    }
+
+    .generosmasinopmov {
+        width: 100%;
+    }
+
+    .sinopsismov {
+        margin-left: 0;
+        font-size: 18px;
+
+    }
+
+    .directoresmov {
+
+        font-size: 13px;
+        margin-left: 0px;
+
+    }
+
+    .recommov {
+        margin-top: 0%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redondeadomov {
+        margin-left: 5px;
+        width: 100px;
+
+    }
+
+    .sinopsis-dg {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    .directores-dg {
+        margin-left: 0px;
+        font-size: 13px;
+    }
+
+    .banner-foto {
+        height: 150px;
+    }
+
+    .genero-peli {
+        width: 90%;
+    }
+
+    .genero {
+        width: 100%;
+    }
+
+    .padre-img-search {
+        width: 100%;
+        padding-top: 0%;
+    }
+
+    .img-search {
+        height: 250px;
+    }
+
+
+    .rating-search {
+        padding-left: 80px;
+        padding-bottom: 20px;
+    }
+
+    .directores-search {
+        margin-left: 0%;
+        padding-top: 0px;
+    }
+
+    .nav {
+        width: 100%;
+    }
 }
