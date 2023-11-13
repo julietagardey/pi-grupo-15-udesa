@@ -47,10 +47,10 @@ fetch(`https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`)
 
     for (let i = 0; i <= 5; i++) {
         series += `<article class="elemento">
-                <a href="./detail-movie.html?id_pelicula=${arraySeries[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arraySeries[i].poster_path}" alt="Imagen"
+                <a href="./detail-serie.html?id_pelicula=${arraySeries[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arraySeries[i].poster_path}" alt="Imagen"
                 class="img-producto"></a>
-                <h3 class="sub-elemento">${arraySeries[i].title} </h3>
-                 <p class="sub-elemento">Fecha de estreno: ${arraySeries[i].release_date}</p>
+                <h3 class="sub-elemento">${arraySeries[i].name} </h3>
+                 <p class="sub-elemento">Fecha de estreno: ${arraySeries[i].first_air_date}</p>
                 </article>`
         
     }

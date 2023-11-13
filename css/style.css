@@ -348,7 +348,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     color: grey;
-    margin-left: 50px;
+    margin-left: 50px; 
     justify-content: center;
     padding-top: 30px;
 }
