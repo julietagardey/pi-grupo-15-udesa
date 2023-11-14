@@ -41,5 +41,22 @@ fetch(`https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`)
     return e
 }); 
 
+let verMas= document.querySelector('.vermas')
+verMas.addEventListener('click', function(){
+
+fetch(`https://api.themoviedb.org/3/movie/${id_serie}?api_key=${acaVaLaAPIKey}/recommendations`)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+
+})
+
+.catch(function(e){
+    console.log(e)
+    return e
+})
+})
+
 
 

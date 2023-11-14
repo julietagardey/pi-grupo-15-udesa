@@ -12,6 +12,8 @@ let urlSeriesG = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVaLaAPIK
 
 
 let tituloMov = document.querySelector(".titulomov");
+let anoEstrenoMov= document.querySelector('.anoestrenomov')
+let listado=document.querySelector('.listado')
 
 fetch(urlPeliculasG)
 .then(function (response) {
@@ -22,7 +24,10 @@ fetch(urlPeliculasG)
     let arrayPeliculasG = data.results;
     let seccion = document.querySelector(".pelis-series-dg");
     let peliculasGenre = "";
-
+    if (arrayPeliculasG.length==0){
+        alert('El genero no existe')
+    }
+    else{
     for (let i = 0; i < 6; i++) {
         peliculasGenre += `<article class="elemento">
                 <a href="./detail-movie.html?id_pelicula=${arrayPeliculasG[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculasG[i].poster_path}" alt="Imagen"
@@ -32,14 +37,22 @@ fetch(urlPeliculasG)
             </article>`
         
     }
+    let listadopelis= ''
+    for (let i = 0; i < arrayPeliculasG.length; i++) {
+        listadopelis+= `<li class="elemento">${arrayPeliculasG[i].title}</li>`
+        
+    }
+
 
     seccion.innerHTML += peliculasGenre;
+    listado.innerHTML = listadopelis;
 
     tituloMov.innerHTML = nombre_genre_pelicula;
-
+    anoEstrenoMov.innerText = '¡Las mejores películas para vos!';
     
-
+    }
     return data
+    
 })
 .catch(function (e) {
     console.log(e);
@@ -67,11 +80,14 @@ fetch(urlSeriesG)
             </article>`
         
     }
-
+    let listadoseries= ''
+    for (let i = 0; i < arraySeriesG.length; i++) {
+        listadoseries+= `<li class="elemento">${arraySeriesG[i].name}</li>`
+    }
     seccion.innerHTML += seriesGenre;
-
+    listado.innerHTML= listadoseries;
     tituloMov.innerHTML = nombre_genre_serie;
-
+    anoEstrenoMov.innerText = '¡Las mejores series para vos!'
     
 
     return data

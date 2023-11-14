@@ -83,10 +83,16 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-items: center;
 }
 
 .logo-footer {
     width: 500px;
+}
+
+.logo-tmdb{
+    width: 100px;
+    align-self: left;
 }
 
 h2 {
@@ -496,6 +502,11 @@ h3 {
 
     .logo-footer {
         width: 100%;
+    }
+
+    .logo-tmdb{
+        width: 100%;
+        align-self: left;
     }
 
     .titulomov {
