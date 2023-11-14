@@ -14,22 +14,34 @@ fetch(url)
     console.log(data);
     let arrayPeliculasB = data.results;
     let seccion = document.querySelector(".pelis-series-dg");
-
+    let tituloMov= document.querySelector('.titulomov')
     let peliculasBusqueda = "";
-
-    for (let i = 0; i < arrayPeliculasB.length; i++) {
-        peliculasBusqueda += `<article class="elemento">
-                <a href="./detail-movie.html?id_pelicula=${arrayPeliculasB[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculasB[i].poster_path}" alt="Imagen"
-                        class="img-producto"></a>
-                <h3>${arrayPeliculasB[i].title}</h3>
-                <p class="fecha-dg">Fecha de estreno: ${arrayPeliculasB[i].release_date}</p>
-            </article>`
-        
+    
+    if (arrayPeliculasB.length==0){
+        let pSearch= document.querySelector('.p-search')
+        pSearch.style.display= 'block'
+        pSearch.style.color= 'white'
+        let titulosearch=document.querySelector('.titulosearch')
+        titulosearch.style.display= 'none'
+        let tituloSeccion= document.querySelector('.titulo-seccion')
+        tituloSeccion.style.display= 'none'
+    } 
+    else {
+        for (let i = 0; i < arrayPeliculasB.length; i++) {
+            peliculasBusqueda += `<article class="elemento">
+                    <a href="./detail-movie.html?id_pelicula=${arrayPeliculasB[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculasB[i].poster_path}" alt="Imagen"
+                            class="img-producto"></a>
+                    <h3>${arrayPeliculasB[i].title}</h3>
+                    <p class="fecha-dg">Fecha de estreno: ${arrayPeliculasB[i].release_date}</p>
+                </article>`
+            
+        } 
+        seccion.innerHTML = peliculasBusqueda;
+        tituloMov.innerText+= ' ' + busquedaPelicula;  
     }
+  
 
-    seccion.innerHTML += peliculasBusqueda;
-
-
+   
     
 
     return data
