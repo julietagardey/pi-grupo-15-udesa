@@ -13,11 +13,11 @@ fetch(urlPeliculas)
 })
 .then(function(data) {
     console.log(data)
-    let arrayGeneros = data;
+    let arrayGeneros = data.genres;
     let generosPeliculas = "";
 
-    for (let i = 0; i <= 13; i++) {
-        generosPeliculas += `<li class="genero"><a href="./detail-genre.html">${data.genres[i].name}</a></li>`
+    for (let i = 0; i < arrayGeneros.length; i++) {
+        generosPeliculas += `<li class="genero"><a href="./detail-genre.html?id_genre_pelicula=${arrayGeneros[i].id}&nombre_genre_pelicula=${arrayGeneros[i].name}">${arrayGeneros[i].name}</a></li>`
     }
     bloqueGenero.innerHTML = generosPeliculas
     
@@ -34,11 +34,11 @@ fetch(urlSeries)
 })
 .then(function(data) {
     console.log(data)
-    let arrayGeneros = data;
+    let arrayGeneros = data.genres;
     let generosSeries = "";
 
-    for (let i = 0; i <= 13; i++) {
-        generosSeries += `<li class="genero"><a href="./detail-genre.html">${data.genres[i].name}</a></li>`
+    for (let i = 0; i < arrayGeneros.length; i++) {
+        generosSeries += `<li class="genero"><a href="./detail-genre.html?id_genre_serie=${arrayGeneros[i].id}&nombre_genre_serie=${arrayGeneros[i].name}">${arrayGeneros[i].name}</a></li>`
     }
     bloqueGenero2.innerHTML = generosSeries
     
