@@ -84,36 +84,33 @@ verMas.addEventListener('click', function(e){
     console.log(this);
 })
 
+
 let favoritos = [];
-let array_local_peliculas = localStorage.getItem("favoritos")
+    let array_local_peliculas = localStorage.getItem("favoritos");
 
-if (array_local_peliculas != null) {
-    favoritos = JSON.parse(array_local_peliculas);
-
-if (favoritos.includes(id_pelicula)) {
-    addToFav.innerText = "remove to Fav";
-} else {
-    addToFav.innerText = "Add to Fav";
-
-}
-}
-
-
-
-
-
-addToFav.addEventListener("click", function() {
-    if (favoritos.includes(id_pelicula)) {
-        addToFav.innerText = "remove to Fav";
-        
-    } else {
-        addToFav.innerText = "Add to Fav";
-        favoritos.push(id_pelicula);
-        let pelisString = JSON.stringify(favoritos);
-        localStorage.setItem("favoritos", pelisString)
-
+    if (array_local_peliculas !== null) {
+        favoritos = JSON.parse(array_local_peliculas);
     }
-    
-})
 
-// el local storage se hace adentro o afuera del evento?? --> para guardar el id de la pelicula dentro del objeto literal 
+
+
+    // Establece el texto en función de si la película está en favoritos
+    addToFav.innerText = favoritos.includes(id_pelicula) ? "Remove from Fav" : "Add to Fav";
+
+   
+    addToFav.addEventListener("click", function () {
+        if (favoritos.includes(id_pelicula)) {
+            // Si la película ya está en favoritos, la tiene que sacar
+            addToFav.innerText = "Add to Fav";
+            let indiceAeliminar = favoritos.indexOf(id_pelicula);
+            favoritos.splice(indiceAeliminar, 1);
+        } else {
+            // Si la película no está en favoritos, la tiene que agregar
+            addToFav.innerText = "Remove from Fav";
+            favoritos.push(id_pelicula);
+        }
+
+        // Guarda la lista de favoritos actualizada en localStorage
+        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+    });
+
