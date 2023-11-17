@@ -10,24 +10,28 @@ let nombre_genre_serie = qsObj.get("nombre_genre_serie");
 let urlPeliculasG = `https://api.themoviedb.org/3/discover/movie?api_key=${acaVaLaAPIKey}&with_genres=${id_genre_pelicula}`;
 let urlSeriesG = `https://api.themoviedb.org/3/discover/tv?api_key=${acaVaLaAPIKey}&with_genres=${id_genre_serie}`;
 
+console.log("pelicula ",nombre_genre_pelicula);
 
-let tituloMov = document.querySelector(".titulomov");
 let anoEstrenoMov= document.querySelector('.anoestrenomov')
 let listado=document.querySelector('.listado')
-
-fetch(urlPeliculasG)
+let titSeries = document.querySelector(".titSeries");
+let titPelis = document.querySelector(".titPelis");
+console.log(nombre_genre_serie);
+if (nombre_genre_serie==null) {
+    fetch(urlPeliculasG)
 .then(function (response) {
     return response.json();
 })
 .then(function (data) {
     console.log(data);
     let arrayPeliculasG = data.results;
-    let seccion = document.querySelector(".pelis-series-dg");
+    let seccion = document.querySelector(".generosPelis");
     let peliculasGenre = "";
     if (arrayPeliculasG.length==0){
         alert('El genero no existe')
     }
     else{
+        document.querySelector("#titulo").innerHTML = `<span>${nombre_genre_pelicula}</span>`
     for (let i = 0; i < 6; i++) {
         peliculasGenre += `<article class="elemento">
                 <a href="./detail-movie.html?id_pelicula=${arrayPeliculasG[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculasG[i].poster_path}" alt="Imagen"
@@ -37,20 +41,17 @@ fetch(urlPeliculasG)
             </article>`
         
     }
-    let listadopelis= ''
-    for (let i = 0; i < arrayPeliculasG.length; i++) {
-        listadopelis+= `<li class="elemento">${arrayPeliculasG[i].title}</li>`
-        
-    }
+  
 
 
     seccion.innerHTML += peliculasGenre;
-    listado.innerHTML = listadopelis;
 
-    tituloMov.innerHTML = nombre_genre_pelicula;
+    
     anoEstrenoMov.innerText = '¡Las mejores películas para vos!';
     
     }
+    document.querySelector(".generosSeries").style.display = "none";
+
     return data
     
 })
@@ -58,17 +59,21 @@ fetch(urlPeliculasG)
     console.log(e);
     return e
 })
+}
 
 
 
-fetch(urlSeriesG)
+
+
+if (nombre_genre_pelicula == null) {
+    fetch(urlSeriesG)
 .then(function (response) {
     return response.json();
 })
 .then(function (data) {
     console.log(data);
     let arraySeriesG = data.results;
-    let seccion = document.querySelector(".pelis-series-dg");
+    let seccion = document.querySelector(".generosSeries");
     let seriesGenre = "";
 
     for (let i = 0; i < 6; i++) {
@@ -80,20 +85,20 @@ fetch(urlSeriesG)
             </article>`
         
     }
-    let listadoseries= ''
-    for (let i = 0; i < arraySeriesG.length; i++) {
-        listadoseries+= `<li class="elemento">${arraySeriesG[i].name}</li>`
-    }
+   
+ 
     seccion.innerHTML += seriesGenre;
-    listado.innerHTML= listadoseries;
-    tituloMov.innerHTML = nombre_genre_serie;
+    titSeries.innerText = nombre_genre_serie;
     anoEstrenoMov.innerText = '¡Las mejores series para vos!'
     
-
+    document.querySelector(".generosPelis").style.display = "none";
     return data
 })
 .catch(function (e) {
     console.log(e);
     return e
 })
+}
+
+
 
