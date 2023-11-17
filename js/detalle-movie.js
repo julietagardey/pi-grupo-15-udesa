@@ -40,3 +40,20 @@ fetch(`https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey
     console.log(e)
     return e
 }); 
+
+
+// intentando hacer electiva agregar y quitar películas de favoritos
+const addToFav = document.querySelector(".addtofav");
+let heart = document.querySelector(".heartmov");
+addToFav.addEventListener("click", function() {
+    if (addToFav.innerText == "Added to FAV") {
+        addToFav.innerText = "Add to Fav";
+        heart.innerHTML = `<i class="fa-regular fa-heart" style="color: #dc0909;"></i>`;
+    } else {
+        addToFav.innerText = "Added to FAV";
+        heart.innerHTML = `<i class="fa-solid fa-heart fa-xl"></i>`;
+    }
+    
+})
+
+// el local storage se hace adentro o afuera del evento?? --> para guardar el id de la pelicula dentro del objeto literal 

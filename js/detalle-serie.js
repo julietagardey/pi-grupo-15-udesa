@@ -41,21 +41,26 @@ fetch(`https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`)
     return e
 }); 
 
+
+// botón de ver mas
+
 let verMas= document.querySelector('.vermas')
 verMas.addEventListener('click', function(){
 
-fetch(`https://api.themoviedb.org/3/movie/${id_serie}?api_key=${acaVaLaAPIKey}/recommendations`)
+fetch(`https://api.themoviedb.org/3/movie/${id_serie}/recommendations?language=en-US&page=1`)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
-
+    console.log(data);
+    // aca va 
+    return data
 })
-
 .catch(function(e){
     console.log(e)
     return e
 })
+console.log(this);
 })
 
 
