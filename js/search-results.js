@@ -28,15 +28,18 @@ fetch(url)
     } 
     else {
         for (let i = 0; i < arrayPeliculasB.length; i++) {
-            peliculasBusqueda += `<article class="elemento">
+            if (arrayPeliculasB[i].poster_path != null) {
+                peliculasBusqueda += `<article class="elemento">
                     <a href="./detail-movie.html?id_pelicula=${arrayPeliculasB[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculasB[i].poster_path}" alt="Imagen"
                             class="img-producto"></a>
                     <h3>${arrayPeliculasB[i].title}</h3>
                     <p class="fecha-dg">Fecha de estreno: ${arrayPeliculasB[i].release_date}</p>
                 </article>`
+            }
             
+            seccion.innerHTML = peliculasBusqueda;
+        
         } 
-        seccion.innerHTML = peliculasBusqueda;
         tituloMov.innerText+= ' ' + busquedaPelicula;  
     }
   

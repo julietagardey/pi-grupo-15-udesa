@@ -44,23 +44,42 @@ fetch(`https://api.themoviedb.org/3/tv/${id_serie}?api_key=${acaVaLaAPIKey}`)
 
 // botón de ver mas
 
-let verMas= document.querySelector('.vermas')
-verMas.addEventListener('click', function(){
+let verMas= document.querySelector('#verRecom');
+console.log(verMas);
 
-fetch(`https://api.themoviedb.org/3/movie/${id_serie}/recommendations?language=en-US&page=1`)
-.then(function(response){
-    return response.json();
-})
-.then(function(data){
-    console.log(data);
-    // aca va 
-    return data
-})
-.catch(function(e){
-    console.log(e)
-    return e
-})
-console.log(this);
+verMas.addEventListener('click', function(e){
+
+    fetch(`https://api.themoviedb.org/3/tv/${id_serie}/recommendations?api_key=${acaVaLaAPIKey}`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+
+        console.log(data);
+
+        // aca va 
+        let arraySeries = data.results;
+        let verRecomendaciones = document.querySelector(".verRecomendaciones");
+        let series = "";
+
+        for (let i = 0; i <= 2; i++) {
+            series += `<article class="elemento">
+                <a href="./detail-serie.html?id_serie=${arraySeries[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arraySeries[i].poster_path}" alt="Imagen"
+                class="img-producto"></a>
+                <h3 class="sub-elemento">${arraySeries[i].name} </h3>
+                </article>`
+        
+            }
+            verRecomendaciones.innerHTML += series
+        return data
+    })
+    .catch(function(e){
+        console.log(e)
+        return e
+    })
+
+    console.log(e);
+    console.log(this);
 })
 
 

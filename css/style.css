@@ -477,6 +477,16 @@ h3 {
 .fa-magnifying-glass{
     color: white;
 }
+
+#verRecom {
+    margin-left: 700px;
+}
+#verRecom1 {
+    margin-left: 700px;
+}
+
+
+
 @media(max-width:420px) {
 
     .item {

@@ -12,6 +12,8 @@ let anoEstrenoMov = document.querySelector(".anoestrenomov");
 let imagenPortMov = document.querySelector(".imagenportmov");
 let sinopsismov = document.querySelector(".sinopsismov")
 let generosMov= document.querySelector('.generosmov')
+// electiva agregar y quitar películas de favoritos
+const addToFav = document.querySelector("#addToFav");
 
 fetch(`https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey}`)
 .then(function(response) {
@@ -42,16 +44,74 @@ fetch(`https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=${acaVaLaAPIKey
 }); 
 
 
-// intentando hacer electiva agregar y quitar películas de favoritos
-const addToFav = document.querySelector(".addtofav");
-let heart = document.querySelector(".heartmov");
+
+// agregar ver recomendaciones
+let verMas= document.querySelector('#verRecom1');
+console.log(verMas);
+
+verMas.addEventListener('click', function(e){
+
+    fetch(`https://api.themoviedb.org/3/movie/${id_pelicula}/recommendations?api_key=${acaVaLaAPIKey}`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+
+        console.log(data);
+
+        // aca va 
+        let verRecomendaciones = document.querySelector(".verRecomendaciones");
+        let arrayPeliculas = data.results;
+        let peliculas = "";
+
+        for (let i = 0; i <= 2; i++) {
+            peliculas += `<article class="elemento">
+                <a href="./detail-movie.html?id_pelicula=${arrayPeliculas[i].id}"><img src="https://image.tmdb.org/t/p/w500/${arrayPeliculas[i].poster_path}" alt="Imagen"
+                class="img-producto"></a>
+                <h3 class="sub-elemento">${arrayPeliculas[i].title} </h3>
+                </article>`
+        
+        }
+            verRecomendaciones.innerHTML += peliculas
+        return data
+    })
+    .catch(function(e){
+        console.log(e)
+        return e
+    })
+
+    console.log(e);
+    console.log(this);
+})
+
+let favoritos = [];
+let array_local_peliculas = localStorage.getItem("favoritos")
+
+if (array_local_peliculas != null) {
+    favoritos = JSON.parse(array_local_peliculas);
+
+if (favoritos.includes(id_pelicula)) {
+    addToFav.innerText = "remove to Fav";
+} else {
+    addToFav.innerText = "Add to Fav";
+
+}
+}
+
+
+
+
+
 addToFav.addEventListener("click", function() {
-    if (addToFav.innerText == "Added to FAV") {
-        addToFav.innerText = "Add to Fav";
-        heart.innerHTML = `<i class="fa-regular fa-heart" style="color: #dc0909;"></i>`;
+    if (favoritos.includes(id_pelicula)) {
+        addToFav.innerText = "remove to Fav";
+        
     } else {
-        addToFav.innerText = "Added to FAV";
-        heart.innerHTML = `<i class="fa-solid fa-heart fa-xl"></i>`;
+        addToFav.innerText = "Add to Fav";
+        favoritos.push(id_pelicula);
+        let pelisString = JSON.stringify(favoritos);
+        localStorage.setItem("favoritos", pelisString)
+
     }
     
 })
