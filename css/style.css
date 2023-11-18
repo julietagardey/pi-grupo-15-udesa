@@ -90,7 +90,7 @@ a {
     width: 500px;
 }
 
-.logo-tmdb{
+.logo-tmdb {
     width: 100px;
     align-self: left;
 }
@@ -260,7 +260,7 @@ h2 {
     margin: 2%;
     border: 1px solid rgb(0, 0, 0);
     background-color: #0000007b;
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 h3 {
@@ -354,7 +354,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     color: grey;
-    margin-left: 50px; 
+    margin-left: 50px;
     justify-content: center;
     padding-top: 30px;
 }
@@ -466,23 +466,31 @@ h3 {
 }
 
 .fa-heart {
-    color:#dc0909 ;
+    color: #dc0909;
 }
+
 .fa-star {
     color: #f0ce24;
 }
+
 .fa-regular {
     color: #f0ce24;
 }
-.fa-magnifying-glass{
+
+.fa-magnifying-glass {
     color: white;
 }
 
 #verRecom {
     margin-left: 700px;
 }
+
 #verRecom1 {
     margin-left: 700px;
+}
+
+.parati {
+    margin: 0;
 }
 
 
@@ -514,7 +522,7 @@ h3 {
         width: 100%;
     }
 
-    .logo-tmdb{
+    .logo-tmdb {
         width: 100%;
         align-self: left;
     }
@@ -529,7 +537,7 @@ h3 {
     }
 
     .imagenportmov {
-        height: 130px;
+        width: 100%;
     }
 
     .trailermov {
@@ -616,5 +624,21 @@ h3 {
 
     .nav {
         width: 100%;
+    }
+
+    .generosmov {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #verRecom1 {
+        margin-left: 100px;
+    }
+    #verRecom {
+        margin-left: 160px;
     }
 }

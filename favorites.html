@@ -7,7 +7,7 @@
     <title>Favoritos</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="./css/index.css"> <!-- OJO DESP SACAR ESTO-->
+
 </head>
 
 <body class="body">
@@ -17,7 +17,7 @@
             <form action="./search-results.html" method="get">
                 <div class="barra_busc">
                     <label for="buscar"></label>
-                    <span class="buscador"> <i class="fa-solid fa-magnifying-glass" ></i></span>
+                    <span class="buscador"> <i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" name="buscar" id="buscar" value="Buscar películas">
                 </div>
                 <div>
@@ -30,8 +30,6 @@
             <nav class="nav">
                 <ul class="barra-nav">
                     <li class="item"><a href="./index.html">Home</a></li>
-                    <li class="item"><a href="./detail-movie.html">Películas</a></li>
-                    <li class="item"><a href="./detail-serie.html">Series</a></li>
                     <li class="item"><a href="./genres.html">Géneros</a></li>
                     <li class="item"><a href="./favorites.html">Favoritos</a></li>
                 </ul>
@@ -46,40 +44,9 @@
 
     <main>
         <section class="pelis-series">
-            <h2 class="titulo-seccion">Mi lista</h2>
-            <article class="elemento">
-                <a href="./detail-movie.html"><img src="./img/imgs-pelis-pop/Titanic.jpeg" alt="Imagen"
-                        class="img-producto"></a>
-                <h3 class="sub-elemento">Titanic</h3>
-            </article>
-            <article class="elemento">
-                <a href="./detail-serie.html"><img
-                        src="./img/imgs-series-pop/AAAABUJWKske9A25AVdTk2PCl0ndgjCABWvoUh4vAURwYckqFNhWRz3Tb78PgKAHogI39B2m8B4x72gMIEYVhJRCOTYgmua_1X-lJuQhjrgXVUTrjby_lYGMbZPTeOkjPU1gn28yow.jpg"
-                        alt="Imagen" class="img-producto"></a>
-                <h3 class="sub-elemento">Un lugar para soñar</h3>
-            </article>
-            <article class="elemento">
-                <a href="./detail-movie.html"><img src="./img/imgs-pelis-valo/corazones.jpeg" alt="Imagen"
-                        class="img-producto"></a>
-                <h3 class="sub-elemento">Corazones mal heridos</h3>
-            </article>
-            <article class="elemento">
-                <a href="./detail-movie.html"><img
-                        src="./img/imgs-pelis-pop/The-Kissing-Booth-2-Netflix-Movie-Soundtrack-Song-Listings.jpeg"
-                        alt="Imagen" class="img-producto"></a>
-                <h3 class="sub-elemento">The kissing booth</h3>
-            </article>
-            <article class="elemento">
-                <a href="./detail-serie.html"><img
-                        src="./img/imgs-series-pop/AAAABRnaGKya6UhlzHfffrRshlPG7GMNDkkDl0ateiLJCykyeoiK3zyjanpsUK-j0-KuD6Ug6_3-COgPv-wJHvtu4A6ecZXKdi5NMRIr.jpg"
-                        alt="Imagen" class="img-producto"></a>
-                <h3 class="sub-elemento">Velvet</h3>
-            </article>
-            <article class="elemento">
-                <a href="./detail-movie.html"><img src="./img/imgs-pelis-valo/maxresdefault2.jpeg" alt="Imagen"
-                        class="img-producto"></a>
-                <h3 class="sub-elemento">Endless Love</h3>
-            </article>
+            <h2 class="titulo-seccion">Mi lista de películas</h2>
+
+
         </section>
 
     </main>
@@ -89,7 +56,7 @@
         <img src="./img/IMG_4259.jpg" alt="Integrantes" class="logo-footer">
         <img src="./img/logo tmdb.png" alt="logo tmdb" class="logo-tmdb">
     </footer>
-
+    <script src="./js/fav-pelis.js"></script>
 </body>
 
 </html>
